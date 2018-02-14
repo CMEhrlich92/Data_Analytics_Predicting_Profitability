@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Demographic_Data-weka.filters.unsupervised.attribute.NumericToNominal-R1,5-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R2-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R4
+Instances:    80000
+Attributes:   5
+              in-store
+              age
+              items
+              amount
+              region
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+region = 1: '(34.75-51.5]' (16000.0/9637.0)
+region = 2: '(51.5-68.25]' (20000.0/13972.0)
+region = 3: '(34.75-51.5]' (18000.0/11521.0)
+region = 4: '(34.75-51.5]' (26000.0/14963.0)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	5
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       29829               37.2863 %
+Incorrectly Classified Instances     50171               62.7137 %
+Kappa statistic                          0.0532
+Mean absolute error                      0.3402
+Root mean squared error                  0.4125
+Relative absolute error                 95.5967 %
+Root relative squared error             97.7817 %
+Total Number of Instances            80000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.018    0.013    0.346      0.018    0.035      0.018    0.647     0.379     '(-inf-34.75]'
+                 0.787    0.703    0.398      0.787    0.529      0.091    0.560     0.414     '(34.75-51.5]'
+                 0.292    0.223    0.301      0.292    0.297      0.069    0.584     0.291     '(51.5-68.25]'
+                 0.031    0.009    0.289      0.031    0.057      0.066    0.817     0.262     '(68.25-inf)'
+Weighted Avg.    0.373    0.321    0.349      0.373    0.285      0.063    0.616     0.359     
+
+=== Confusion Matrix ===
+
+     a     b     c     d   <-- classified as
+   408 19718  2231    97 |     a = '(-inf-34.75]'
+   471 23378  5616   258 |     b = '(34.75-51.5]'
+   300 13496  5793   259 |     c = '(51.5-68.25]'
+     0  2146  5579   250 |     d = '(68.25-inf)'
+
